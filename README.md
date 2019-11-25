@@ -8,34 +8,16 @@ tweet
 ress
 
 
-users
-
-| id  
-| name   
-| email  
-| password   
-| group_name 
-
-tweet
-
-| id      
-| users_id 
-| text  
-| group_name 
-| time       
-| image      
-
-ress
-
-| id    
-| users_id 
-| text     
-| time     
-| tweet_id 
+| users | tweet | ress |
+|:-----------|------------:|:------------:|
+| id | id | id |
+| name | users_id | users_id |
+| email | text | text |
+| password | group_name | time |
+| group_name | time | tweet_id |
+| *** | image | *** |
 
 
-Why
-データ管理に必要だから
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
