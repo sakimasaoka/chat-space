@@ -4,10 +4,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|INT|null: false|
-|name|VARCHAR|null: false|
-|email|VARCHAR|null: false, foreign_key: true|
-|password|VARCHAR|null: false, foreign_key: true|
+|id|integer|null: false|
+|name|string|null: false|
+|email|string|null: false, foreign_key: true|
+|password|string|null: false, foreign_key: true|
 
 
 ### Association
@@ -21,8 +21,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|INT|null: false|
-|name|VARCHAR|null: false, foreign_key: true|
+|id|integer|null: false|
+|name|string|null: false, foreign_key: true|
 
 
 
@@ -36,12 +36,12 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|INT| null: false, foreign_key: true|
-|text|VARCHAR| |
-|time|DATETIME| |
-|image|VARCHAR| |
-|user_id|INT|null: false, foreign_key: true|
-|group_id|INT|null: false, foreign_key: true|
+|id|integer| null: false, foreign_key: true|
+|text|text| |
+|time|datetime| |
+|image|binary| |
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 
 ### Association
@@ -53,8 +53,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|INT|null: false, foreign_key: true|
-|group_id|INT|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 
 ### Association
