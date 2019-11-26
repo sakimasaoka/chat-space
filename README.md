@@ -1,7 +1,4 @@
 # README
-
-# README
-
 ## usersテーブル
 
 |Column|Type|Options|
@@ -13,7 +10,7 @@
 
 
 ### Association
-- has_many :users_groups
+- has_many :users_groups, messeages
 - has_many  :groups,  through:  users_groups
 
 
@@ -23,12 +20,12 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|INT|null: false|
-
+|groupname|VARCHAR|null: false, foreign_key: true|
 
 
 
 ### Association
-- has_many :users_groups
+- has_many :users_groups, messages
 - has_many  :users,  through:  users_groups
 
 
@@ -40,8 +37,8 @@
 |text|VARCHAR|null: false|
 |time|DATETIME|null: false, foreign_key: true|
 |image|VARCHAR|null: false, foreign_key: true|
-|users_id|INT|null: false|
-|groups_id|INT|null: false|
+|user_id|INT|null: false|
+|group_id|INT|null: false|
 
 
 ### Association
@@ -53,8 +50,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|users_id|INT|null: false|
-|groups_id|INT|null: false|
+|user_id|INT|null: false|
+|group_id|INT|null: false|
 
 
 ### Association
