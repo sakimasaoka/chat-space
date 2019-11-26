@@ -12,7 +12,7 @@
 
 ### Association
 - belongs_to :groups
-- belongs_to :messages
+
 
 
 ## groupsテーブル
@@ -20,13 +20,12 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|INT|null: false, foreign_key: true|
-|users_id|VARCHAR|null: false, foreign_key: true|
-|messages_id|VARCHAR|null: false, foreign_key: true|
+|groupname|VARCHAR|null: false, foreign_key: true|
 
 
 
 ### Association
-- belongs_to :message
+- belongs_to :groups_messages
 - belongs_to :users
 
 
@@ -41,5 +40,18 @@
 
 
 ### Association
-- belongs_to :groups
+- belongs_to :groups_messages
 - belongs_to :users
+
+
+## groups_messagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|groups_id|INT|null: false, foreign_key: true|
+|messages_id|INT|null: false, foreign_key: true|
+
+
+### Association
+- belongs_to :groups
+- belongs_to :messages
