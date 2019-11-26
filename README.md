@@ -8,14 +8,13 @@ tweet
 ress
 
 
-| users | tweet | ress |
-|:-----------|------------:|:------------:|
-| id | id | id |
-| name | users_id | users_id |
-| email | text | text |
-| password | group_name | time |
-| group_name | time | tweet_id |
-| *** | image | *** |
+| users | messages | ress | group |
+|:-----------|------------:|:------------:|:------------:|
+| id | id | id | id |
+| name | text | text | users_id |
+| email | time | time | messages_id |
+| password | image | *** |ress_id |
+
 
 
 
