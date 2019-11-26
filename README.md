@@ -40,6 +40,8 @@
 |text|VARCHAR|null: false|
 |time|DATETIME|null: false, foreign_key: true|
 |image|VARCHAR|null: false, foreign_key: true|
+|users_id|INT|null: false|
+|groups_id|INT|null: false|
 
 
 ### Association
