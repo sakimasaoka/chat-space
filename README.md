@@ -4,7 +4,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|INT|null: false|
-|name|VARCHAR|null: false, foreign_key: true|
+|name|VARCHAR|null: false|
 |email|VARCHAR|null: false, foreign_key: true|
 |password|VARCHAR|null: false, foreign_key: true|
 
@@ -21,7 +21,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|INT|null: false|
-|groupname|VARCHAR|null: false, foreign_key: true|
+|groupname|VARCHAR|null: false|
 
 
 
