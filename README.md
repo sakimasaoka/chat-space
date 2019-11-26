@@ -10,7 +10,8 @@
 
 
 ### Association
-- has_many :users_groups, messeages
+- has_many :users_groups
+- has_many :messeages
 - has_many  :groups,  through:  users_groups
 
 
@@ -25,20 +26,21 @@
 
 
 ### Association
-- has_many :users_groups, messages
-- has_many  :users,  through:  users_groups
+- has_many :users_groups
+- has_many :messages
+- has_many :users,  through:  users_groups
 
 
 ## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|INT|null: false, foreign_key: true|
-|text|VARCHAR|null: false|
-|time|DATETIME|null: false, foreign_key: true|
-|image|VARCHAR|null: false, foreign_key: true|
-|user_id|INT|null: false|
-|group_id|INT|null: false|
+|id|INT| null: false, foreign_key: true|
+|text|VARCHAR| |
+|time|DATETIME| |
+|image|VARCHAR| |
+|user_id|INT|null: false, foreign_key: true|
+|group_id|INT|null: false, foreign_key: true|
 
 
 ### Association
@@ -50,8 +52,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|INT|null: false|
-|group_id|INT|null: false|
+|user_id|INT|null: false, foreign_key: true|
+|group_id|INT|null: false, foreign_key: true|
 
 
 ### Association
