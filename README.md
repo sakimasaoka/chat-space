@@ -1,43 +1,45 @@
 # README
-What
 
-4つのテーブルを作りました
+## usersテーブル
 
-users
-messages
-ress
-group
-
-
-| users | messages | ress | group |
-|:-----------|------------:|:------------:|:------------:|
-| id | id | id | id |
-| name | text | text | users_id |
-| email | time | time | messages_id |
-| password | image | *** |ress_id |
+|Column|Type|Options|
+|------|----|-------|
+|id|INT|null: false, foreign_key: true|
+|name|VARCHAR|null: false, foreign_key: true|
+|email|VARCHAR|null: false, foreign_key: true|
+|password|VARCHAR|null: false, foreign_key: true|
 
 
+### Association
+- belongs_to :groups
+- belongs_to :messages
 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## groupsテーブル
 
-Things you may want to cover:
+|Column|Type|Options|
+|------|----|-------|
+|id|INT|null: false, foreign_key: true|
+|users_id|VARCHAR|null: false, foreign_key: true|
+|messages_id|VARCHAR|null: false, foreign_key: true|
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+### Association
+- belongs_to :message
+- belongs_to :users
 
-* Database creation
 
-* Database initialization
+## messagesテーブル
 
-* How to run the test suite
+|Column|Type|Options|
+|------|----|-------|
+|id|INT|null: false, foreign_key: true|
+|text|VARCHAR|null: false, foreign_key: true|
+|time|DATETIME|null: false, foreign_key: true|
+|image|VARCHAR|null: false, foreign_key: true|
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to :groups
+- belongs_to :users
