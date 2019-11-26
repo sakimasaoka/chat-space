@@ -1,11 +1,12 @@
 # README
 What
 
-３つのテーブルを作りました
+4つのテーブルを作りました
 
 users
-tweet
+messages
 ress
+group
 
 
 | users | messages | ress | group |
