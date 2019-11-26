@@ -1,17 +1,20 @@
 # README
 
+# README
+
 ## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|INT|null: false, foreign_key: true|
+|id|INT|null: false|
 |name|VARCHAR|null: false, foreign_key: true|
 |email|VARCHAR|null: false, foreign_key: true|
 |password|VARCHAR|null: false, foreign_key: true|
 
 
 ### Association
-- belongs_to :groups
+- has_many :users_groups
+- has_many  :groups,  through:  users_groups
 
 
 
@@ -19,14 +22,14 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|INT|null: false, foreign_key: true|
-|groupname|VARCHAR|null: false, foreign_key: true|
+|id|INT|null: false|
+
 
 
 
 ### Association
-- belongs_to :groups_messages
-- belongs_to :users
+- has_many :users_groups
+- has_many  :users,  through:  users_groups
 
 
 ## messagesテーブル
@@ -34,24 +37,24 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|INT|null: false, foreign_key: true|
-|text|VARCHAR|null: false, foreign_key: true|
+|text|VARCHAR|null: false|
 |time|DATETIME|null: false, foreign_key: true|
 |image|VARCHAR|null: false, foreign_key: true|
 
 
 ### Association
-- belongs_to :groups_messages
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
 
 
-## groups_messagesテーブル
+## users_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|groups_id|INT|null: false, foreign_key: true|
-|messages_id|INT|null: false, foreign_key: true|
+|users_id|INT|null: false|
+|groups_id|INT|null: false|
 
 
 ### Association
-- belongs_to :groups
-- belongs_to :messages
+- belongs_to :user
+- belongs_to :group
