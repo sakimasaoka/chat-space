@@ -21,7 +21,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|INT|null: false|
-|groupname|VARCHAR|null: false|
+|name|VARCHAR|null: false|
 
 
 
