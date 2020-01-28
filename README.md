@@ -22,7 +22,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|name|string|null: false, foreign_key: true|
+|name|string|null: false|
 
 
 
